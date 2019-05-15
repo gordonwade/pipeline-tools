@@ -114,11 +114,12 @@ workflow AdapterOptimusDropSeq {
 
   # placeholder here
   Array[Object] inputs = []
+  Array[Object] outputs = []
 
   call submit_wdl.submit {
     input:
       inputs = inputs,
-      outputs = [analysis.summary_report],
+      outputs = outputs,
       format_map = format_map,
       submit_url = submit_url,
       cromwell_url = cromwell_url,
