@@ -104,7 +104,6 @@ workflow AdapterOptimusDropSeq {
     input:
       r1_fastq = prep.r1_fastq,
       r2_fastq = prep.r2_fastq,
-      i1_fastq = if (length(prep.i1_fastq) <= 0) then None else prep.i1_fastq,
       sample_id = prep.sample_id,
       tar_star_reference = tar_star_reference,
       annotations_gtf = annotations_gtf,
