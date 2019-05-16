@@ -8,7 +8,6 @@
   "AdapterOptimusDropSeq.run_type": "run",
   "AdapterOptimusDropSeq.add_md5s": false,
 
-  "AdapterOptimusDropSeq.input_csv_file": "gs://hca-dcp-mint-test-data/20190507-PipelinesSurge/Drop-Seq/Retinal-Bipolar-Neuron/mouse_retinal_900K.csv",
   "AdapterOptimusDropSeq.output_directory": "gs://hca-dcp-mint-test-data/drop-seq-output",
 
   "AdapterOptimusDropSeq.submit_url": "https://api.ingest.integration.data.humancellatlas.org/",
@@ -17,6 +16,6 @@
   "AdapterOptimusDropSeq.dss_url":"https://dss.integration.data.humancellatlas.org/v1",
   "AdapterOptimusDropSeq.runtime_environment": "test",
 
-  "AdapterOptimusDropSeq.bundle_uuid": "00000000-0000-0000-0000-000000000000",
-  "AdapterOptimusDropSeq.bundle_version": "2018-12-03T172048.201761Z"
+  "AdapterOptimusDropSeq.bundle_uuid": "f13816fd-fd28-4df8-ba5e-0e95cdc661f3",
+  "AdapterOptimusDropSeq.bundle_version": "2019-05-16T145538.974000Z"
 }

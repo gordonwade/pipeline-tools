@@ -35,9 +35,7 @@ task GetInputs {
     docker: "quay.io/humancellatlas/secondary-analysis-pipeline-tools:" + pipeline_tools_version
   }
   output {
-    String sample_id = read_string("sample_id.txt")
-    Array[String] r1_fastq = read_lines("r1.txt")
-    Array[String] r2_fastq = read_lines("r2.txt")
+    File inputs = "inputs.csv"
     Array[File] http_requests = glob("request_*.txt")
     Array[File] http_responses = glob("response_*.txt")
   }
@@ -107,7 +105,7 @@ workflow AdapterOptimusDropSeq {
       # r2_fastq = prep.r2_fastq,
       # sample_id = prep.sample_id,
 
-      input_csv_file = input_csv_file,
+      input_csv_file = prep.inputs,
       output_directory = output_directory
   }
 
