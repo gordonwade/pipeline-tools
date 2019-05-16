@@ -24,7 +24,7 @@ task GetInputs {
     python -u <<CODE
     from pipeline_tools.pipelines.optimus_drop_seq import optimus_drop_seq
 
-    optimus.create_optimus_drop_seq_input_tsv(
+    optimus_drop_seq.create_optimus_drop_seq_input_tsv(
                 "${bundle_uuid}",
                 "${bundle_version}",
                 "${dss_url}")
@@ -48,9 +48,10 @@ workflow AdapterOptimusDropSeq {
   String bundle_uuid
   String bundle_version
 
-  File tar_star_reference  # star reference
-  File annotations_gtf  # gtf containing annotations for gene tagging
-  File ref_genome_fasta  # genome fasta file
+  File input_csv_file  # the file containing the inputs
+  File output_directory  # the output directory
+
+  #File ref_genome_fasta  # genome fasta file
   String fastq_suffix = ".gz"  # add this suffix to fastq files for picard
   
   # Note: This "None" is a workaround in WDL-draft to simulate a "None" type
@@ -102,13 +103,12 @@ workflow AdapterOptimusDropSeq {
 
   call OptimusDropSeq.OptimusDropSeq as analysis {
     input:
-      r1_fastq = prep.r1_fastq,
-      r2_fastq = prep.r2_fastq,
-      sample_id = prep.sample_id,
-      tar_star_reference = tar_star_reference,
-      annotations_gtf = annotations_gtf,
-      ref_genome_fasta = ref_genome_fasta,
-      fastq_suffix = fastq_suffix
+      # r1_fastq = prep.r1_fastq,
+      # r2_fastq = prep.r2_fastq,
+      # sample_id = prep.sample_id,
+
+      input_csv_file = input_csv_file,
+      output_directory = output_directory
   }
 
   # placeholder here

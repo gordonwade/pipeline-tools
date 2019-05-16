@@ -1,13 +1,22 @@
 {
-  "AdapterOptimusDropSeq.tar_star_reference": "gs://hca-dcp-sc-pipelines-test-data/alignmentReferences/optimusGencodeV27/buildReference/output_bucket/star_primary_gencode_v27.tar",
-  "AdapterOptimusDropSeq.annotations_gtf": "gs://hca-dcp-sc-pipelines-test-data/alignmentReferences/optimusGencodeV27/gencode.v27.primary_assembly.annotation.gtf.gz",
-  "AdapterOptimusDropSeq.ref_genome_fasta": "gs://hca-dcp-sc-pipelines-test-data/alignmentReferences/optimusGencodeV27/GRCh38.primary_assembly.genome.fa",
-  "AdapterOptimusDropSeq.reference_bundle": "bf51d668-3e14-4843-9bc7-5d676fdf0e01",
+  "AdapterOptimusDropSeq.reference_bundle": "00000000-0000-0000-0000-000000000000",
   "AdapterOptimusDropSeq.format_map": "gs://hca-dcp-mint-test-data/adapters/file_format_map.json",
   "AdapterOptimusDropSeq.method": "Optimus_drop_seq",
   "AdapterOptimusDropSeq.analysis_file_version": "6.0.0",
   "AdapterOptimusDropSeq.analysis_protocol_schema_version": "9.0.0",
   "AdapterOptimusDropSeq.analysis_process_schema_version": "11.0.1",
   "AdapterOptimusDropSeq.run_type": "run",
-  "AdapterOptimusDropSeq.add_md5s": false
+  "AdapterOptimusDropSeq.add_md5s": false,
+
+  "AdapterOptimusDropSeq.input_csv_file": "gs://hca-dcp-mint-test-data/20190507-PipelinesSurge/Drop-Seq/Retinal-Bipolar-Neuron/mouse_retinal_900K.csv",
+  "AdapterOptimusDropSeq.output_directory": "gs://hca-dcp-mint-test-data/drop-seq-output",
+
+  "AdapterOptimusDropSeq.submit_url": "https://api.ingest.integration.data.humancellatlas.org/",
+  "AdapterOptimusDropSeq.schema_url" : "https://schema.integration.data.humancellatlas.org/",
+  "AdapterOptimusDropSeq.cromwell_url": "https://cromwell.caas-prod.broadinstitute.org",
+  "AdapterOptimusDropSeq.dss_url":"https://dss.integration.data.humancellatlas.org/v1",
+  "AdapterOptimusDropSeq.runtime_environment": "test",
+
+  "AdapterOptimusDropSeq.bundle_uuid": "00000000-0000-0000-0000-000000000000",
+  "AdapterOptimusDropSeq.bundle_version": "2018-12-03T172048.201761Z"
 }
